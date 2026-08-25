@@ -286,7 +286,7 @@ point.
   sampling and it silently becomes a different set, taking every historical
   metric with it.
 
-## 7. Repo map
+## 8. Repo map
 
 ```
 src/ml_orch/
