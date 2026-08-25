@@ -1,0 +1,2507 @@
+{
+  "production": "lifecycle-20260824T193639Z-98360f",
+  "records": [
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193621Z-0aed32",
+      "created_at": "2026-08-24T19:36:24+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/18c576bf2d1f' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "baseline": 1.1244902955138416,
+              "candidate": 0.5971714789730501,
+              "relative": 0.4689403000137324
+            },
+            "name": "golden:cold_start",
+            "reason": "cold start: +46.9% vs baseline",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:minimum_margin",
+            "reason": "no incumbent; margin check delegated to cold_start",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:significance",
+            "reason": "no incumbent; significance not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no incumbent; per-target regression not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "no slice metrics to compare",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/18c576bf2d1f' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "baseline": 0.7969076703989033,
+              "candidate": 0.27919912095614646,
+              "relative": 0.6496468394934769
+            },
+            "name": "rolling:cold_start",
+            "reason": "cold start: +65.0% vs baseline",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:minimum_margin",
+            "reason": "no incumbent; margin check delegated to cold_start",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:significance",
+            "reason": "no incumbent; significance not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no incumbent; per-target regression not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "no slice metrics to compare",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": true
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193621Z-0aed32",
+          "normalized_score": 0.5971714789730501,
+          "per_target": {
+            "alpha": {
+              "mae": 11.694720533333342,
+              "n": 750,
+              "r2": -0.13068384505704378,
+              "rmse": 13.972324254279252
+            },
+            "cv": {
+              "mae": 3.6283798399999996,
+              "n": 750,
+              "r2": 0.3711462302150229,
+              "rmse": 4.55764839543409
+            },
+            "gap": {
+              "mae": 0.023573825333333326,
+              "n": 750,
+              "r2": 0.5852192296517493,
+              "rmse": 0.03196696042656125
+            },
+            "homo": {
+              "mae": 0.013320887999999996,
+              "n": 750,
+              "r2": 0.4749217681705806,
+              "rmse": 0.01859093065577944
+            },
+            "lumo": {
+              "mae": 0.01673467333333333,
+              "n": 750,
+              "r2": 0.7441556580384008,
+              "rmse": 0.024068007219072655
+            },
+            "mu": {
+              "mae": 0.7659591600000001,
+              "n": 750,
+              "r2": 0.46456125169598106,
+              "rmse": 1.1242513931459066
+            },
+            "r2": {
+              "mae": 283.4917902040001,
+              "n": 750,
+              "r2": -0.13357053328414126,
+              "rmse": 370.57306502509107
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.5971893008978506
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.21154986668606549
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.2763573346456619
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.7155596305301594
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193621Z-0aed32",
+          "normalized_score": 0.27919912095614646,
+          "per_target": {
+            "alpha": {
+              "mae": 1.68560985915493,
+              "n": 142,
+              "r2": 0.9378873686623491,
+              "rmse": 2.279439877979664
+            },
+            "cv": {
+              "mae": 0.9631131690140867,
+              "n": 142,
+              "r2": 0.9014801582237933,
+              "rmse": 1.3629017982957865
+            },
+            "gap": {
+              "mae": 0.01606830985915491,
+              "n": 142,
+              "r2": 0.8226474677722196,
+              "rmse": 0.022968008496817013
+            },
+            "homo": {
+              "mae": 0.010450260563380285,
+              "n": 142,
+              "r2": 0.6454213695021512,
+              "rmse": 0.015168772748086727
+            },
+            "lumo": {
+              "mae": 0.011852119718309859,
+              "n": 142,
+              "r2": 0.8954455783257302,
+              "rmse": 0.01653268646127303
+            },
+            "mu": {
+              "mae": 0.5693643380281691,
+              "n": 142,
+              "r2": 0.6068345019710846,
+              "rmse": 0.8503605068223281
+            },
+            "r2": {
+              "mae": 37.044166330985924,
+              "n": 142,
+              "r2": 0.9038248921812214,
+              "rmse": 59.89805236110296
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 140,
+              "normalized_mae": 0.27323366318055164
+            },
+            "heavy_atoms[0-6)": {
+              "n": 25,
+              "normalized_mae": 0.30120272077965016
+            },
+            "heavy_atoms[6-8)": {
+              "n": 117,
+              "normalized_mae": 0.2744974970622354
+            }
+          }
+        }
+      },
+      "notes": "promoted by gate",
+      "stage": "archived",
+      "version": "lifecycle-20260824T193621Z-0aed32",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:96300360a0b36b01",
+        "featurizer": "rdkit_descriptors@1edb543c96db/18c576bf2d1f",
+        "model": "lifecycle-20260824T193621Z-0aed32"
+      }
+    },
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193624Z-0f55ef",
+      "created_at": "2026-08-24T19:36:27+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/68c2bbb53327' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.38988581893417906,
+              "incumbent": 0.5971714789730501,
+              "relative": 0.34711245820938763
+            },
+            "name": "golden:minimum_margin",
+            "reason": "improvement +34.71% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.4505008655390646,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.33372838714178,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.1285839105340531,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.0789046035388663,
+                  "p": 0.0
+                },
+                "lumo": {
+                  "delta": 0.05043197003244723,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.0217577630555701,
+                  "p": 0.0075
+                },
+                "r2": {
+                  "delta": 0.3870921204303168,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.0010714285714285715
+            },
+            "name": "golden:significance",
+            "reason": "improvement is significant (pooled p=0.001)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/68c2bbb53327' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.2678478627297626,
+              "incumbent": 0.36398828836732383,
+              "relative": 0.2641305468063297
+            },
+            "name": "rolling:minimum_margin",
+            "reason": "improvement +26.41% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.16157493386335237,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.1880111173112691,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.0872794438356636,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.032825770361378855,
+                  "p": 0.0265
+                },
+                "lumo": {
+                  "delta": 0.04142016742480395,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.026807027122172027,
+                  "p": 0.0395
+                },
+                "r2": {
+                  "delta": 0.13506451954428925,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.009428571428571429
+            },
+            "name": "rolling:significance",
+            "reason": "improvement is significant (pooled p=0.009)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": true
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.38988581893417906,
+          "per_target": {
+            "alpha": {
+              "mae": 5.775102400000006,
+              "n": 750,
+              "r2": 0.6772258308271444,
+              "rmse": 7.465303148614937
+            },
+            "cv": {
+              "mae": 1.7103333333333333,
+              "n": 750,
+              "r2": 0.8536380938209318,
+              "rmse": 2.198771059872371
+            },
+            "gap": {
+              "mae": 0.017191503999999986,
+              "n": 750,
+              "r2": 0.7524041604223284,
+              "rmse": 0.024698109280833616
+            },
+            "homo": {
+              "mae": 0.011296510666666667,
+              "n": 750,
+              "r2": 0.6286106264626825,
+              "rmse": 0.015635215104585758
+            },
+            "lumo": {
+              "mae": 0.014334966666666664,
+              "n": 750,
+              "r2": 0.8033565037794134,
+              "rmse": 0.02110046461412639
+            },
+            "mu": {
+              "mae": 0.7325302066666667,
+              "n": 750,
+              "r2": 0.48219569057978295,
+              "rmse": 1.10558303601158
+            },
+            "r2": {
+              "mae": 148.76191529866668,
+              "n": 750,
+              "r2": 0.6113277244486975,
+              "rmse": 216.99081802548082
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.3894199112506396
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20351595229561087
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.22452936539583238
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.4501221495048156
+            }
+          }
+        },
+        "golden_incumbent": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193621Z-0aed32",
+          "normalized_score": 0.5971714789730501,
+          "per_target": {
+            "alpha": {
+              "mae": 11.694720533333346,
+              "n": 750,
+              "r2": -0.13068384505704445,
+              "rmse": 13.972324254279256
+            },
+            "cv": {
+              "mae": 3.62837984,
+              "n": 750,
+              "r2": 0.3711462302150228,
+              "rmse": 4.55764839543409
+            },
+            "gap": {
+              "mae": 0.023573825333333326,
+              "n": 750,
+              "r2": 0.5852192296517496,
+              "rmse": 0.03196696042656125
+            },
+            "homo": {
+              "mae": 0.013320887999999996,
+              "n": 750,
+              "r2": 0.4749217681705805,
+              "rmse": 0.01859093065577944
+            },
+            "lumo": {
+              "mae": 0.01673467333333333,
+              "n": 750,
+              "r2": 0.7441556580384008,
+              "rmse": 0.024068007219072655
+            },
+            "mu": {
+              "mae": 0.7659591599999999,
+              "n": 750,
+              "r2": 0.46456125169598106,
+              "rmse": 1.1242513931459066
+            },
+            "r2": {
+              "mae": 283.4917902040001,
+              "n": 750,
+              "r2": -0.13357053328414148,
+              "rmse": 370.57306502509107
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.5971893008978507
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.21154986668606557
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.2763573346456619
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.7155596305301593
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.2678478627297626,
+          "per_target": {
+            "alpha": {
+              "mae": 1.7571302816901408,
+              "n": 284,
+              "r2": 0.9439720619793206,
+              "rmse": 2.5480349436545224
+            },
+            "cv": {
+              "mae": 0.924283309859155,
+              "n": 284,
+              "r2": 0.9377345206543121,
+              "rmse": 1.261943168238604
+            },
+            "gap": {
+              "mae": 0.013435707746478865,
+              "n": 284,
+              "r2": 0.8660918758062814,
+              "rmse": 0.018910674797193546
+            },
+            "homo": {
+              "mae": 0.009457989436619721,
+              "n": 284,
+              "r2": 0.6354427998851873,
+              "rmse": 0.013732932082186376
+            },
+            "lumo": {
+              "mae": 0.011873978873239432,
+              "n": 284,
+              "r2": 0.8784522352250675,
+              "rmse": 0.017436018220347262
+            },
+            "mu": {
+              "mae": 0.564141795774648,
+              "n": 284,
+              "r2": 0.6149715277281793,
+              "rmse": 0.8544005810999031
+            },
+            "r2": {
+              "mae": 55.248757619718276,
+              "n": 284,
+              "r2": 0.8858950822390501,
+              "rmse": 90.6004621786593
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 278,
+              "normalized_mae": 0.2592585979040726
+            },
+            "heavy_atoms[0-6)": {
+              "n": 25,
+              "normalized_mae": 0.29222075472980386
+            },
+            "heavy_atoms[6-8)": {
+              "n": 205,
+              "normalized_mae": 0.24457021789606187
+            },
+            "heavy_atoms[8-10)": {
+              "n": 54,
+              "normalized_mae": 0.34493295330212576
+            }
+          }
+        },
+        "rolling_incumbent": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193621Z-0aed32",
+          "normalized_score": 0.36398828836732383,
+          "per_target": {
+            "alpha": {
+              "mae": 3.4964404929577455,
+              "n": 284,
+              "r2": 0.7903621896955755,
+              "rmse": 4.928762224322498
+            },
+            "cv": {
+              "mae": 1.875106267605634,
+              "n": 284,
+              "r2": 0.7440639193145276,
+              "rmse": 2.558479175635923
+            },
+            "gap": {
+              "mae": 0.017946112676056333,
+              "n": 284,
+              "r2": 0.7826173418167526,
+              "rmse": 0.02409439415238371
+            },
+            "homo": {
+              "mae": 0.010204602112676051,
+              "n": 284,
+              "r2": 0.5967239546371826,
+              "rmse": 0.014443805945095539
+            },
+            "lumo": {
+              "mae": 0.013945482394366195,
+              "n": 284,
+              "r2": 0.8543806052422829,
+              "rmse": 0.01908461646906028
+            },
+            "mu": {
+              "mae": 0.6010534718309859,
+              "n": 284,
+              "r2": 0.5881610879016206,
+              "rmse": 0.883646987079742
+            },
+            "r2": {
+              "mae": 91.47468482042255,
+              "n": 284,
+              "r2": 0.6906603160410372,
+              "rmse": 149.1750014497048
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 278,
+              "normalized_mae": 0.35732991435605
+            },
+            "heavy_atoms[0-6)": {
+              "n": 25,
+              "normalized_mae": 0.29447802367411174
+            },
+            "heavy_atoms[6-8)": {
+              "n": 205,
+              "normalized_mae": 0.3035815674003231
+            },
+            "heavy_atoms[8-10)": {
+              "n": 54,
+              "normalized_mae": 0.6254907775444618
+            }
+          }
+        }
+      },
+      "notes": "promoted by gate",
+      "stage": "archived",
+      "version": "lifecycle-20260824T193624Z-0f55ef",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:6304bde6d8653b45",
+        "featurizer": "rdkit_descriptors@1edb543c96db/68c2bbb53327",
+        "model": "lifecycle-20260824T193624Z-0f55ef"
+      }
+    },
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193627Z-ae02c1",
+      "created_at": "2026-08-24T19:36:30+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/958a19e85894' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.3081141615722305,
+              "incumbent": 0.389885818934179,
+              "relative": 0.2097323200558708
+            },
+            "name": "golden:minimum_margin",
+            "reason": "improvement +20.97% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.2346798110479048,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.06586181255657916,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.03885308470028283,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.04279849622748809,
+                  "p": 0.0005
+                },
+                "lumo": {
+                  "delta": 0.028838872167689385,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.0020697559046448577,
+                  "p": 0.4015
+                },
+                "r2": {
+                  "delta": 0.1592997689290508,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.05742857142857143
+            },
+            "name": "golden:significance",
+            "reason": "improvement is within noise (pooled p=0.057 > alpha=0.05)",
+            "verdict": false
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/958a19e85894' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.2992774567616307,
+              "incumbent": 0.38625198739435895,
+              "relative": 0.22517561972808242
+            },
+            "name": "rolling:minimum_margin",
+            "reason": "improvement +22.52% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.16758727281109595,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.09898422600735558,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.042728556415705776,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.08256398003101284,
+                  "p": 0.0
+                },
+                "lumo": {
+                  "delta": 0.04425592728630726,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.023887076495513138,
+                  "p": 0.0595
+                },
+                "r2": {
+                  "delta": 0.14881467538210694,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.008499999999999999
+            },
+            "name": "rolling:significance",
+            "reason": "improvement is significant (pooled p=0.008)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "3 slices within tolerance",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": false
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193627Z-ae02c1",
+          "normalized_score": 0.3081141615722305,
+          "per_target": {
+            "alpha": {
+              "mae": 2.6913905333333354,
+              "n": 750,
+              "r2": 0.9113916177818083,
+              "rmse": 3.911429130557443
+            },
+            "cv": {
+              "mae": 1.3318038933333323,
+              "n": 750,
+              "r2": 0.9064450212667563,
+              "rmse": 1.7579213304680794
+            },
+            "gap": {
+              "mae": 0.015263013333333327,
+              "n": 750,
+              "r2": 0.8127133661940604,
+              "rmse": 0.021480551551205568
+            },
+            "homo": {
+              "mae": 0.010198471999999995,
+              "n": 750,
+              "r2": 0.705267827089852,
+              "rmse": 0.013928453443126172
+            },
+            "lumo": {
+              "mae": 0.012962725333333331,
+              "n": 750,
+              "r2": 0.8364165245785606,
+              "rmse": 0.019245178343124458
+            },
+            "mu": {
+              "mae": 0.7293502026666668,
+              "n": 750,
+              "r2": 0.49553642904779593,
+              "rmse": 1.091247950208774
+            },
+            "r2": {
+              "mae": 93.31661737733339,
+              "n": 750,
+              "r2": 0.8173161583766042,
+              "rmse": 148.7646152612195
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.30680604462239774
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20106636430313257
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.22121570048099817
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.3403460306521546
+            }
+          }
+        },
+        "golden_incumbent": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.389885818934179,
+          "per_target": {
+            "alpha": {
+              "mae": 5.775102400000004,
+              "n": 750,
+              "r2": 0.6772258308271445,
+              "rmse": 7.465303148614935
+            },
+            "cv": {
+              "mae": 1.7103333333333333,
+              "n": 750,
+              "r2": 0.8536380938209318,
+              "rmse": 2.198771059872371
+            },
+            "gap": {
+              "mae": 0.01719150399999999,
+              "n": 750,
+              "r2": 0.7524041604223284,
+              "rmse": 0.024698109280833613
+            },
+            "homo": {
+              "mae": 0.011296510666666667,
+              "n": 750,
+              "r2": 0.6286106264626826,
+              "rmse": 0.015635215104585758
+            },
+            "lumo": {
+              "mae": 0.014334966666666664,
+              "n": 750,
+              "r2": 0.8033565037794134,
+              "rmse": 0.02110046461412639
+            },
+            "mu": {
+              "mae": 0.7325302066666667,
+              "n": 750,
+              "r2": 0.48219569057978295,
+              "rmse": 1.10558303601158
+            },
+            "r2": {
+              "mae": 148.76191529866662,
+              "n": 750,
+              "r2": 0.6113277244486977,
+              "rmse": 216.9908180254808
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.3894199112506396
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20351595229561092
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.22452936539583238
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.45012214950481555
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193627Z-ae02c1",
+          "normalized_score": 0.2992774567616307,
+          "per_target": {
+            "alpha": {
+              "mae": 1.9449778169014096,
+              "n": 284,
+              "r2": 0.8951045123880723,
+              "rmse": 2.711040221587165
+            },
+            "cv": {
+              "mae": 1.0057835563380277,
+              "n": 284,
+              "r2": 0.886757247112539,
+              "rmse": 1.281945232981124
+            },
+            "gap": {
+              "mae": 0.012802489436619713,
+              "n": 284,
+              "r2": 0.874260603768963,
+              "rmse": 0.017590417094939612
+            },
+            "homo": {
+              "mae": 0.008795880281690144,
+              "n": 284,
+              "r2": 0.7597199022658709,
+              "rmse": 0.011808329274138612
+            },
+            "lumo": {
+              "mae": 0.011981616197183098,
+              "n": 284,
+              "r2": 0.8748141780934922,
+              "rmse": 0.017389503565572027
+            },
+            "mu": {
+              "mae": 0.6155537007042252,
+              "n": 284,
+              "r2": 0.6077922207755653,
+              "rmse": 0.8697434042310883
+            },
+            "r2": {
+              "mae": 68.31099624999999,
+              "n": 284,
+              "r2": 0.7848490573360812,
+              "rmse": 109.89262520950005
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 279,
+              "normalized_mae": 0.29413957218325765
+            },
+            "heavy_atoms[6-8)": {
+              "n": 88,
+              "normalized_mae": 0.2613701085267007
+            },
+            "heavy_atoms[8-10)": {
+              "n": 196,
+              "normalized_mae": 0.3162970824997625
+            }
+          }
+        },
+        "rolling_incumbent": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.38625198739435895,
+          "per_target": {
+            "alpha": {
+              "mae": 3.347786971830985,
+              "n": 284,
+              "r2": 0.63670330941182,
+              "rmse": 5.0453149126054715
+            },
+            "cv": {
+              "mae": 1.3828607394366204,
+              "n": 284,
+              "r2": 0.7663447271261524,
+              "rmse": 1.8414166072979663
+            },
+            "gap": {
+              "mae": 0.014922112676056325,
+              "n": 284,
+              "r2": 0.8235026727546486,
+              "rmse": 0.02084056643076021
+            },
+            "homo": {
+              "mae": 0.01078481338028169,
+              "n": 284,
+              "r2": 0.6287530143023151,
+              "rmse": 0.014677801936962642
+            },
+            "lumo": {
+              "mae": 0.014156725352112676,
+              "n": 284,
+              "r2": 0.8268924682176557,
+              "rmse": 0.020448788990969198
+            },
+            "mu": {
+              "mae": 0.6487275633802816,
+              "n": 284,
+              "r2": 0.5446606158347439,
+              "rmse": 0.9371317459557377
+            },
+            "r2": {
+              "mae": 103.56777928169015,
+              "n": 284,
+              "r2": 0.6023681614578895,
+              "rmse": 149.39549352911362
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 279,
+              "normalized_mae": 0.38024722997348237
+            },
+            "heavy_atoms[6-8)": {
+              "n": 88,
+              "normalized_mae": 0.2653775383061451
+            },
+            "heavy_atoms[8-10)": {
+              "n": 196,
+              "normalized_mae": 0.4405221482094754
+            }
+          }
+        }
+      },
+      "notes": "blocked by gate",
+      "stage": "rejected",
+      "version": "lifecycle-20260824T193627Z-ae02c1",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:1a187482fbf303a6",
+        "featurizer": "rdkit_descriptors@1edb543c96db/958a19e85894",
+        "model": "lifecycle-20260824T193627Z-ae02c1"
+      }
+    },
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193630Z-f93d79",
+      "created_at": "2026-08-24T19:36:34+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/2a397220ac39' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.2810392406356411,
+              "incumbent": 0.389885818934179,
+              "relative": 0.27917552527580775
+            },
+            "name": "golden:minimum_margin",
+            "reason": "improvement +27.92% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.2860353216622488,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.08964933720514465,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.0660248427945941,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.057875509104446596,
+                  "p": 0.0
+                },
+                "lumo": {
+                  "delta": 0.04959682660666901,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.0046162397794020475,
+                  "p": 0.3205
+                },
+                "r2": {
+                  "delta": 0.20812797093726013,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.045785714285714284
+            },
+            "name": "golden:significance",
+            "reason": "improvement is significant (pooled p=0.046)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/2a397220ac39' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.3115773154408119,
+              "incumbent": 0.5119708689571576,
+              "relative": 0.39141592943467823
+            },
+            "name": "rolling:minimum_margin",
+            "reason": "improvement +39.14% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.5527260362865066,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.20854568832323195,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.09864283777568814,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.10085885454220403,
+                  "p": 0.0
+                },
+                "lumo": {
+                  "delta": 0.08541573648754183,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.04955445679349729,
+                  "p": 0.0
+                },
+                "r2": {
+                  "delta": 0.3070112644057499,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.0
+            },
+            "name": "rolling:significance",
+            "reason": "improvement is significant (pooled p=0.000)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "2 slices within tolerance",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": true
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193630Z-f93d79",
+          "normalized_score": 0.2810392406356411,
+          "per_target": {
+            "alpha": {
+              "mae": 2.0165749333333345,
+              "n": 750,
+              "r2": 0.9435724877894004,
+              "rmse": 3.121357507743493
+            },
+            "cv": {
+              "mae": 1.1950891866666657,
+              "n": 750,
+              "r2": 0.9275037822639114,
+              "rmse": 1.547475059519473
+            },
+            "gap": {
+              "mae": 0.013914330666666655,
+              "n": 750,
+              "r2": 0.8431458836965562,
+              "rmse": 0.019658030142005574
+            },
+            "homo": {
+              "mae": 0.009811656000000002,
+              "n": 750,
+              "r2": 0.7241860432856665,
+              "rmse": 0.013474021722015046
+            },
+            "lumo": {
+              "mae": 0.011974998666666667,
+              "n": 750,
+              "r2": 0.863245062523331,
+              "rmse": 0.01759639621191415
+            },
+            "mu": {
+              "mae": 0.7254377466666666,
+              "n": 750,
+              "r2": 0.5024921290649336,
+              "rmse": 1.0836986042783028
+            },
+            "r2": {
+              "mae": 76.32165105999998,
+              "n": 750,
+              "r2": 0.8764826346531529,
+              "rmse": 122.32453831545624
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.27961059631789936
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20607353788222116
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.21960730871508796
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.3037802398535422
+            }
+          }
+        },
+        "golden_incumbent": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.389885818934179,
+          "per_target": {
+            "alpha": {
+              "mae": 5.775102400000004,
+              "n": 750,
+              "r2": 0.6772258308271445,
+              "rmse": 7.465303148614935
+            },
+            "cv": {
+              "mae": 1.7103333333333337,
+              "n": 750,
+              "r2": 0.8536380938209317,
+              "rmse": 2.1987710598723713
+            },
+            "gap": {
+              "mae": 0.01719150399999999,
+              "n": 750,
+              "r2": 0.7524041604223284,
+              "rmse": 0.024698109280833616
+            },
+            "homo": {
+              "mae": 0.011296510666666662,
+              "n": 750,
+              "r2": 0.6286106264626827,
+              "rmse": 0.015635215104585754
+            },
+            "lumo": {
+              "mae": 0.014334966666666666,
+              "n": 750,
+              "r2": 0.8033565037794134,
+              "rmse": 0.02110046461412639
+            },
+            "mu": {
+              "mae": 0.7325302066666667,
+              "n": 750,
+              "r2": 0.48219569057978295,
+              "rmse": 1.10558303601158
+            },
+            "r2": {
+              "mae": 148.76191529866668,
+              "n": 750,
+              "r2": 0.6113277244486975,
+              "rmse": 216.99081802548082
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.3894199112506396
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20351595229561084
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.22452936539583238
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.4501221495048156
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193630Z-f93d79",
+          "normalized_score": 0.3115773154408119,
+          "per_target": {
+            "alpha": {
+              "mae": 1.8349109154929581,
+              "n": 284,
+              "r2": 0.8960686370867087,
+              "rmse": 2.426480411144715
+            },
+            "cv": {
+              "mae": 1.0579794366197188,
+              "n": 284,
+              "r2": 0.869127374595548,
+              "rmse": 1.3932162235304515
+            },
+            "gap": {
+              "mae": 0.013212507042253518,
+              "n": 284,
+              "r2": 0.849836921612902,
+              "rmse": 0.018196763407265594
+            },
+            "homo": {
+              "mae": 0.008754644366197181,
+              "n": 284,
+              "r2": 0.7431989903384624,
+              "rmse": 0.011797471510102924
+            },
+            "lumo": {
+              "mae": 0.011660591549295777,
+              "n": 284,
+              "r2": 0.888078296670441,
+              "rmse": 0.015974415685714456
+            },
+            "mu": {
+              "mae": 0.6353998802816901,
+              "n": 284,
+              "r2": 0.6046162788871876,
+              "rmse": 0.8901315512301824
+            },
+            "r2": {
+              "mae": 82.35269257042252,
+              "n": 284,
+              "r2": 0.7709480264791932,
+              "rmse": 126.29921058037742
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 283,
+              "normalized_mae": 0.31194286988590536
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.3115773154408119
+            }
+          }
+        },
+        "rolling_incumbent": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193624Z-0f55ef",
+          "normalized_score": 0.5119708689571576,
+          "per_target": {
+            "alpha": {
+              "mae": 5.995103169014088,
+              "n": 284,
+              "r2": 0.0753061949699384,
+              "rmse": 7.237731241602513
+            },
+            "cv": {
+              "mae": 1.861126971830988,
+              "n": 284,
+              "r2": 0.6239243713965844,
+              "rmse": 2.3617379635839826
+            },
+            "gap": {
+              "mae": 0.01784460915492957,
+              "n": 284,
+              "r2": 0.7106331451531586,
+              "rmse": 0.025260210131565514
+            },
+            "homo": {
+              "mae": 0.011102679577464792,
+              "n": 284,
+              "r2": 0.5625002790612943,
+              "rmse": 0.015398537108014558
+            },
+            "lumo": {
+              "mae": 0.015739140845070422,
+              "n": 284,
+              "r2": 0.7874839986922435,
+              "rmse": 0.022012209814932706
+            },
+            "mu": {
+              "mae": 0.7055498556338029,
+              "n": 284,
+              "r2": 0.5126076197644618,
+              "rmse": 0.9882894756256663
+            },
+            "r2": {
+              "mae": 163.3718882323944,
+              "n": 284,
+              "r2": 0.2765558463479437,
+              "rmse": 224.45853431768424
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 283,
+              "normalized_mae": 0.511500384901386
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.5119708689571576
+            }
+          }
+        }
+      },
+      "notes": "promoted by gate",
+      "stage": "archived",
+      "version": "lifecycle-20260824T193630Z-f93d79",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:5e5806692a55302b",
+        "featurizer": "rdkit_descriptors@1edb543c96db/2a397220ac39",
+        "model": "lifecycle-20260824T193630Z-f93d79"
+      }
+    },
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193634Z-696daa",
+      "created_at": "2026-08-24T19:36:39+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/4f14099b4daa' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.26796989081922634,
+              "incumbent": 0.28103924063564106,
+              "relative": 0.046503647628904396
+            },
+            "name": "golden:minimum_margin",
+            "reason": "improvement +4.65% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.01390064427166382,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.027300981099396524,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.010984888995391738,
+                  "p": 0.0005
+                },
+                "homo": {
+                  "delta": 0.013219462443811888,
+                  "p": 0.003
+                },
+                "lumo": {
+                  "delta": 0.011672477194293835,
+                  "p": 0.0005
+                },
+                "mu": {
+                  "delta": 0.005132247067718968,
+                  "p": 0.129
+                },
+                "r2": {
+                  "delta": 0.009274747642626329,
+                  "p": 0.004
+                }
+              },
+              "pooled_p": 0.019571428571428573
+            },
+            "name": "golden:significance",
+            "reason": "improvement is significant (pooled p=0.020)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/4f14099b4daa' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.3314386581787457,
+              "incumbent": 0.3691946250058085,
+              "relative": 0.10226575434696218
+            },
+            "name": "rolling:minimum_margin",
+            "reason": "improvement +10.23% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.0509654213162343,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.07651644813201393,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.03875125086430145,
+                  "p": 0.0
+                },
+                "homo": {
+                  "delta": 0.025544251176931702,
+                  "p": 0.008
+                },
+                "lumo": {
+                  "delta": 0.02008884165590411,
+                  "p": 0.0
+                },
+                "mu": {
+                  "delta": 0.017181228546930005,
+                  "p": 0.032
+                },
+                "r2": {
+                  "delta": 0.03524432609712365,
+                  "p": 0.004
+                }
+              },
+              "pooled_p": 0.006285714285714285
+            },
+            "name": "rolling:significance",
+            "reason": "improvement is significant (pooled p=0.006)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "2 slices within tolerance",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": true
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193634Z-696daa",
+          "normalized_score": 0.26796989081922634,
+          "per_target": {
+            "alpha": {
+              "mae": 1.833919333333334,
+              "n": 750,
+              "r2": 0.9541464187070118,
+              "rmse": 2.8137447172075394
+            },
+            "cv": {
+              "mae": 1.0381814933333329,
+              "n": 750,
+              "r2": 0.9448218669646706,
+              "rmse": 1.350048854366981
+            },
+            "gap": {
+              "mae": 0.013369090666666656,
+              "n": 750,
+              "r2": 0.8553537953028123,
+              "rmse": 0.01887754690044939
+            },
+            "homo": {
+              "mae": 0.009472497333333331,
+              "n": 750,
+              "r2": 0.7335520761887908,
+              "rmse": 0.01324327185237847
+            },
+            "lumo": {
+              "mae": 0.011419586666666667,
+              "n": 750,
+              "r2": 0.8735448977924363,
+              "rmse": 0.016920780942182703
+            },
+            "mu": {
+              "mae": 0.7175524853333333,
+              "n": 750,
+              "r2": 0.5017599412847059,
+              "rmse": 1.0844957566416373
+            },
+            "r2": {
+              "mae": 73.09351614399999,
+              "n": 750,
+              "r2": 0.887227082375083,
+              "rmse": 116.88317058488339
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.2667542901482482
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20219097973162187
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.2196815608287269
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.2862790614277744
+            }
+          }
+        },
+        "golden_incumbent": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193630Z-f93d79",
+          "normalized_score": 0.28103924063564106,
+          "per_target": {
+            "alpha": {
+              "mae": 2.016574933333334,
+              "n": 750,
+              "r2": 0.9435724877894004,
+              "rmse": 3.1213575077434936
+            },
+            "cv": {
+              "mae": 1.1950891866666657,
+              "n": 750,
+              "r2": 0.9275037822639114,
+              "rmse": 1.547475059519473
+            },
+            "gap": {
+              "mae": 0.013914330666666657,
+              "n": 750,
+              "r2": 0.8431458836965562,
+              "rmse": 0.019658030142005577
+            },
+            "homo": {
+              "mae": 0.009811655999999998,
+              "n": 750,
+              "r2": 0.7241860432856665,
+              "rmse": 0.013474021722015046
+            },
+            "lumo": {
+              "mae": 0.011974998666666667,
+              "n": 750,
+              "r2": 0.863245062523331,
+              "rmse": 0.01759639621191415
+            },
+            "mu": {
+              "mae": 0.7254377466666666,
+              "n": 750,
+              "r2": 0.5024921290649336,
+              "rmse": 1.0836986042783028
+            },
+            "r2": {
+              "mae": 76.32165106,
+              "n": 750,
+              "r2": 0.8764826346531528,
+              "rmse": 122.32453831545625
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.27961059631789936
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.2060735378822212
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.21960730871508796
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.30378023985354213
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193634Z-696daa",
+          "normalized_score": 0.3314386581787457,
+          "per_target": {
+            "alpha": {
+              "mae": 1.586485915492954,
+              "n": 284,
+              "r2": 0.8702258129696544,
+              "rmse": 2.3215872629836394
+            },
+            "cv": {
+              "mae": 1.0031740845070425,
+              "n": 284,
+              "r2": 0.8418205836990293,
+              "rmse": 1.3165573925099272
+            },
+            "gap": {
+              "mae": 0.012790732394366193,
+              "n": 284,
+              "r2": 0.8239004603848997,
+              "rmse": 0.018010208315184423
+            },
+            "homo": {
+              "mae": 0.008431383802816899,
+              "n": 284,
+              "r2": 0.6498903220523815,
+              "rmse": 0.010930680325752956
+            },
+            "lumo": {
+              "mae": 0.010136426056338027,
+              "n": 284,
+              "r2": 0.8970650002073978,
+              "rmse": 0.01404305590025211
+            },
+            "mu": {
+              "mae": 0.6299544330985917,
+              "n": 284,
+              "r2": 0.5942213651112991,
+              "rmse": 0.877536479053325
+            },
+            "r2": {
+              "mae": 76.81080873943661,
+              "n": 284,
+              "r2": 0.755025462818427,
+              "rmse": 116.0687165926058
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 284,
+              "normalized_mae": 0.3314386581787457
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.3314386581787457
+            }
+          }
+        },
+        "rolling_incumbent": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193630Z-f93d79",
+          "normalized_score": 0.3691946250058085,
+          "per_target": {
+            "alpha": {
+              "mae": 1.914933802816901,
+              "n": 284,
+              "r2": 0.8237964021392485,
+              "rmse": 2.7051929062323055
+            },
+            "cv": {
+              "mae": 1.2564650000000006,
+              "n": 284,
+              "r2": 0.757699098686213,
+              "rmse": 1.6294548321899525
+            },
+            "gap": {
+              "mae": 0.01445385915492958,
+              "n": 284,
+              "r2": 0.7846298811817791,
+              "rmse": 0.019917386438366137
+            },
+            "homo": {
+              "mae": 0.008903271126760565,
+              "n": 284,
+              "r2": 0.5908213487560404,
+              "rmse": 0.011816847164619332
+            },
+            "lumo": {
+              "mae": 0.011015721830985915,
+              "n": 284,
+              "r2": 0.8764484275244138,
+              "rmse": 0.015385238365160838
+            },
+            "mu": {
+              "mae": 0.6536231549295776,
+              "n": 284,
+              "r2": 0.5732340770580676,
+              "rmse": 0.8999439415953783
+            },
+            "r2": {
+              "mae": 85.07582895774647,
+              "n": 284,
+              "r2": 0.6890471683296423,
+              "rmse": 130.76814629493862
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 284,
+              "normalized_mae": 0.3691946250058085
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.3691946250058085
+            }
+          }
+        }
+      },
+      "notes": "promoted by gate",
+      "stage": "archived",
+      "version": "lifecycle-20260824T193634Z-696daa",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:650d50b006685ede",
+        "featurizer": "rdkit_descriptors@1edb543c96db/4f14099b4daa",
+        "model": "lifecycle-20260824T193634Z-696daa"
+      }
+    },
+    {
+      "artifact_dir": "registry/models/lifecycle-20260824T193639Z-98360f",
+      "created_at": "2026-08-24T19:36:46+00:00",
+      "gate_decision": {
+        "checks": [
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/82c85543643f' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.2588014945074419,
+              "incumbent": 0.2679698908192264,
+              "relative": 0.034214277894263685
+            },
+            "name": "golden:minimum_margin",
+            "reason": "improvement +3.42% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.008164190802771943,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.013087424258396419,
+                  "p": 0.0005
+                },
+                "gap": {
+                  "delta": 0.008841018392028674,
+                  "p": 0.0065
+                },
+                "homo": {
+                  "delta": 0.0028938767959980267,
+                  "p": 0.264
+                },
+                "lumo": {
+                  "delta": 0.007801014102347605,
+                  "p": 0.005
+                },
+                "mu": {
+                  "delta": 0.010779711706562485,
+                  "p": 0.015
+                },
+                "r2": {
+                  "delta": 0.01261153812438614,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.04157142857142858
+            },
+            "name": "golden:significance",
+            "reason": "improvement is significant (pooled p=0.042)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "golden:slices",
+            "reason": "4 slices within tolerance",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:sanity",
+            "reason": "7 targets finite and non-empty",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:featurizer_binding",
+            "reason": "featurizer 'rdkit_descriptors@1edb543c96db/82c85543643f' matches model binding",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:cold_start",
+            "reason": "incumbent exists; cold-start check not applicable",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "candidate": 0.33349453557162007,
+              "incumbent": 0.3670958906809004,
+              "relative": 0.09153290996245031
+            },
+            "name": "rolling:minimum_margin",
+            "reason": "improvement +9.15% clears the margin",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {
+              "per_target": {
+                "alpha": {
+                  "delta": 0.03974419486576602,
+                  "p": 0.0
+                },
+                "cv": {
+                  "delta": 0.0716525351729752,
+                  "p": 0.0
+                },
+                "gap": {
+                  "delta": 0.012730026293833381,
+                  "p": 0.025
+                },
+                "homo": {
+                  "delta": 0.006797252360571487,
+                  "p": 0.2545
+                },
+                "lumo": {
+                  "delta": 0.01727703715743892,
+                  "p": 0.0015
+                },
+                "mu": {
+                  "delta": 0.021694991719370445,
+                  "p": 0.004
+                },
+                "r2": {
+                  "delta": 0.06531344819500662,
+                  "p": 0.0
+                }
+              },
+              "pooled_p": 0.04071428571428572
+            },
+            "name": "rolling:significance",
+            "reason": "improvement is significant (pooled p=0.041)",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:no_target_regression",
+            "reason": "no target regressed beyond threshold",
+            "verdict": true
+          },
+          {
+            "blocking": true,
+            "evidence": {},
+            "name": "rolling:slices",
+            "reason": "2 slices within tolerance",
+            "verdict": true
+          }
+        ],
+        "n_selected": null,
+        "verdict": true
+      },
+      "metrics": {
+        "golden": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193639Z-98360f",
+          "normalized_score": 0.2588014945074419,
+          "per_target": {
+            "alpha": {
+              "mae": 1.7266412000000004,
+              "n": 750,
+              "r2": 0.9592556682483875,
+              "rmse": 2.6523550658160384
+            },
+            "cv": {
+              "mae": 0.9629637733333334,
+              "n": 750,
+              "r2": 0.9527240488353705,
+              "rmse": 1.2496434620033028
+            },
+            "gap": {
+              "mae": 0.012930262666666657,
+              "n": 750,
+              "r2": 0.8640057155006374,
+              "rmse": 0.018304267952256374
+            },
+            "homo": {
+              "mae": 0.009398252000000001,
+              "n": 750,
+              "r2": 0.7340865375053054,
+              "rmse": 0.0132299830089586
+            },
+            "lumo": {
+              "mae": 0.011048390666666668,
+              "n": 750,
+              "r2": 0.8800873457897884,
+              "rmse": 0.016477250059197784
+            },
+            "mu": {
+              "mae": 0.7009903746666666,
+              "n": 750,
+              "r2": 0.5436526407528455,
+              "rmse": 1.0379018998170282
+            },
+            "r2": {
+              "mae": 68.70399007466668,
+              "n": 750,
+              "r2": 0.9018435031574901,
+              "rmse": 109.04583959277774
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.257979720466918
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20229041494169955
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.21997572302635796
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.2737520600856274
+            }
+          }
+        },
+        "golden_incumbent": {
+          "eval_set": "golden",
+          "model_version": "lifecycle-20260824T193634Z-696daa",
+          "normalized_score": 0.2679698908192264,
+          "per_target": {
+            "alpha": {
+              "mae": 1.8339193333333341,
+              "n": 750,
+              "r2": 0.9541464187070118,
+              "rmse": 2.813744717207539
+            },
+            "cv": {
+              "mae": 1.0381814933333329,
+              "n": 750,
+              "r2": 0.9448218669646706,
+              "rmse": 1.350048854366981
+            },
+            "gap": {
+              "mae": 0.013369090666666656,
+              "n": 750,
+              "r2": 0.8553537953028123,
+              "rmse": 0.01887754690044939
+            },
+            "homo": {
+              "mae": 0.009472497333333335,
+              "n": 750,
+              "r2": 0.7335520761887908,
+              "rmse": 0.013243271852378474
+            },
+            "lumo": {
+              "mae": 0.011419586666666665,
+              "n": 750,
+              "r2": 0.8735448977924363,
+              "rmse": 0.016920780942182703
+            },
+            "mu": {
+              "mae": 0.7175524853333333,
+              "n": 750,
+              "r2": 0.501759941284706,
+              "rmse": 1.0844957566416373
+            },
+            "r2": {
+              "mae": 73.09351614399999,
+              "n": 750,
+              "r2": 0.887227082375083,
+              "rmse": 116.88317058488339
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 748,
+              "normalized_mae": 0.2667542901482482
+            },
+            "heavy_atoms[0-6)": {
+              "n": 35,
+              "normalized_mae": 0.20219097973162192
+            },
+            "heavy_atoms[6-8)": {
+              "n": 162,
+              "normalized_mae": 0.21968156082872686
+            },
+            "heavy_atoms[8-10)": {
+              "n": 553,
+              "normalized_mae": 0.2862790614277744
+            }
+          }
+        },
+        "rolling": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193639Z-98360f",
+          "normalized_score": 0.33349453557162007,
+          "per_target": {
+            "alpha": {
+              "mae": 1.8328809859154904,
+              "n": 284,
+              "r2": 0.8249445099253978,
+              "rmse": 2.7728949594216354
+            },
+            "cv": {
+              "mae": 0.8943843661971823,
+              "n": 284,
+              "r2": 0.8814759828747641,
+              "rmse": 1.161387596665008
+            },
+            "gap": {
+              "mae": 0.014090873239436618,
+              "n": 284,
+              "r2": 0.8298895747453592,
+              "rmse": 0.020310393353379794
+            },
+            "homo": {
+              "mae": 0.00981536267605634,
+              "n": 284,
+              "r2": 0.5620021262691295,
+              "rmse": 0.013171693836047188
+            },
+            "lumo": {
+              "mae": 0.01085531690140845,
+              "n": 284,
+              "r2": 0.8845911088825588,
+              "rmse": 0.0164716619978626
+            },
+            "mu": {
+              "mae": 0.7001798169014084,
+              "n": 284,
+              "r2": 0.4934365670219093,
+              "rmse": 0.9809207844406042
+            },
+            "r2": {
+              "mae": 77.15700822535207,
+              "n": 284,
+              "r2": 0.8348585307130487,
+              "rmse": 111.3687657647645
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 276,
+              "normalized_mae": 0.32620008040536874
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.33349453557162007
+            }
+          }
+        },
+        "rolling_incumbent": {
+          "eval_set": "rolling",
+          "model_version": "lifecycle-20260824T193634Z-696daa",
+          "normalized_score": 0.3670958906809004,
+          "per_target": {
+            "alpha": {
+              "mae": 2.096283098591544,
+              "n": 284,
+              "r2": 0.7685785731203916,
+              "rmse": 3.188213041770935
+            },
+            "cv": {
+              "mae": 1.1361004577464782,
+              "n": 284,
+              "r2": 0.7957106020935126,
+              "rmse": 1.524743941929843
+            },
+            "gap": {
+              "mae": 0.014717750000000009,
+              "n": 284,
+              "r2": 0.8154211597734407,
+              "rmse": 0.021156500169261738
+            },
+            "homo": {
+              "mae": 0.009950644366197185,
+              "n": 284,
+              "r2": 0.5459765659169392,
+              "rmse": 0.013410493527773345
+            },
+            "lumo": {
+              "mae": 0.011693014084507042,
+              "n": 284,
+              "r2": 0.8693206763265647,
+              "rmse": 0.017527550490906242
+            },
+            "mu": {
+              "mae": 0.7300801830985915,
+              "n": 284,
+              "r2": 0.4433777302079823,
+              "rmse": 1.0282466601279627
+            },
+            "r2": {
+              "mae": 95.05638654225352,
+              "n": 284,
+              "r2": 0.7416362114871233,
+              "rmse": 139.3000128928573
+            }
+          },
+          "slices": {
+            "has_fluorine=false": {
+              "n": 276,
+              "normalized_mae": 0.3529312584977153
+            },
+            "heavy_atoms[8-10)": {
+              "n": 284,
+              "normalized_mae": 0.3670958906809004
+            }
+          }
+        }
+      },
+      "notes": "promoted by gate",
+      "stage": "production",
+      "version": "lifecycle-20260824T193639Z-98360f",
+      "versions": {
+        "code": "dirty:d4b31d0",
+        "config": "sha256:68918b9d12ce2342",
+        "data": "sha256:da04b8aa0a3ff477",
+        "featurizer": "rdkit_descriptors@1edb543c96db/82c85543643f",
+        "model": "lifecycle-20260824T193639Z-98360f"
+      }
+    }
+  ]
+}

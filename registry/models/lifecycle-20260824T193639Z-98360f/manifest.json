@@ -1,0 +1,444 @@
+{
+  "version": "lifecycle-20260824T193639Z-98360f",
+  "stage": "staging",
+  "created_at": "2026-08-24T19:36:46+00:00",
+  "versions": {
+    "data": "sha256:da04b8aa0a3ff477",
+    "featurizer": "rdkit_descriptors@1edb543c96db/82c85543643f",
+    "model": "lifecycle-20260824T193639Z-98360f",
+    "code": "dirty:d4b31d0",
+    "config": "sha256:68918b9d12ce2342"
+  },
+  "metrics": {
+    "golden": {
+      "model_version": "lifecycle-20260824T193639Z-98360f",
+      "eval_set": "golden",
+      "normalized_score": 0.2588014945074419,
+      "per_target": {
+        "mu": {
+          "mae": 0.7009903746666666,
+          "rmse": 1.0379018998170282,
+          "r2": 0.5436526407528455,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 1.7266412000000004,
+          "rmse": 2.6523550658160384,
+          "r2": 0.9592556682483875,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.009398252000000001,
+          "rmse": 0.0132299830089586,
+          "r2": 0.7340865375053054,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.011048390666666668,
+          "rmse": 0.016477250059197784,
+          "r2": 0.8800873457897884,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.012930262666666657,
+          "rmse": 0.018304267952256374,
+          "r2": 0.8640057155006374,
+          "n": 750
+        },
+        "r2": {
+          "mae": 68.70399007466668,
+          "rmse": 109.04583959277774,
+          "r2": 0.9018435031574901,
+          "n": 750
+        },
+        "cv": {
+          "mae": 0.9629637733333334,
+          "rmse": 1.2496434620033028,
+          "r2": 0.9527240488353705,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.20229041494169955,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.21997572302635796,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.2737520600856274,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.257979720466918,
+          "n": 748
+        }
+      }
+    },
+    "golden_incumbent": {
+      "model_version": "lifecycle-20260824T193634Z-696daa",
+      "eval_set": "golden",
+      "normalized_score": 0.2679698908192264,
+      "per_target": {
+        "mu": {
+          "mae": 0.7175524853333333,
+          "rmse": 1.0844957566416373,
+          "r2": 0.501759941284706,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 1.8339193333333341,
+          "rmse": 2.813744717207539,
+          "r2": 0.9541464187070118,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.009472497333333335,
+          "rmse": 0.013243271852378474,
+          "r2": 0.7335520761887908,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.011419586666666665,
+          "rmse": 0.016920780942182703,
+          "r2": 0.8735448977924363,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.013369090666666656,
+          "rmse": 0.01887754690044939,
+          "r2": 0.8553537953028123,
+          "n": 750
+        },
+        "r2": {
+          "mae": 73.09351614399999,
+          "rmse": 116.88317058488339,
+          "r2": 0.887227082375083,
+          "n": 750
+        },
+        "cv": {
+          "mae": 1.0381814933333329,
+          "rmse": 1.350048854366981,
+          "r2": 0.9448218669646706,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.20219097973162192,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.21968156082872686,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.2862790614277744,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.2667542901482482,
+          "n": 748
+        }
+      }
+    },
+    "rolling": {
+      "model_version": "lifecycle-20260824T193639Z-98360f",
+      "eval_set": "rolling",
+      "normalized_score": 0.33349453557162007,
+      "per_target": {
+        "mu": {
+          "mae": 0.7001798169014084,
+          "rmse": 0.9809207844406042,
+          "r2": 0.4934365670219093,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 1.8328809859154904,
+          "rmse": 2.7728949594216354,
+          "r2": 0.8249445099253978,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.00981536267605634,
+          "rmse": 0.013171693836047188,
+          "r2": 0.5620021262691295,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.01085531690140845,
+          "rmse": 0.0164716619978626,
+          "r2": 0.8845911088825588,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.014090873239436618,
+          "rmse": 0.020310393353379794,
+          "r2": 0.8298895747453592,
+          "n": 284
+        },
+        "r2": {
+          "mae": 77.15700822535207,
+          "rmse": 111.3687657647645,
+          "r2": 0.8348585307130487,
+          "n": 284
+        },
+        "cv": {
+          "mae": 0.8943843661971823,
+          "rmse": 1.161387596665008,
+          "r2": 0.8814759828747641,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.33349453557162007,
+          "n": 284
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.32620008040536874,
+          "n": 276
+        }
+      }
+    },
+    "rolling_incumbent": {
+      "model_version": "lifecycle-20260824T193634Z-696daa",
+      "eval_set": "rolling",
+      "normalized_score": 0.3670958906809004,
+      "per_target": {
+        "mu": {
+          "mae": 0.7300801830985915,
+          "rmse": 1.0282466601279627,
+          "r2": 0.4433777302079823,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 2.096283098591544,
+          "rmse": 3.188213041770935,
+          "r2": 0.7685785731203916,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.009950644366197185,
+          "rmse": 0.013410493527773345,
+          "r2": 0.5459765659169392,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.011693014084507042,
+          "rmse": 0.017527550490906242,
+          "r2": 0.8693206763265647,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.014717750000000009,
+          "rmse": 0.021156500169261738,
+          "r2": 0.8154211597734407,
+          "n": 284
+        },
+        "r2": {
+          "mae": 95.05638654225352,
+          "rmse": 139.3000128928573,
+          "r2": 0.7416362114871233,
+          "n": 284
+        },
+        "cv": {
+          "mae": 1.1361004577464782,
+          "rmse": 1.524743941929843,
+          "r2": 0.7957106020935126,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.3670958906809004,
+          "n": 284
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.3529312584977153,
+          "n": 276
+        }
+      }
+    }
+  },
+  "gate_decision": {
+    "verdict": true,
+    "n_selected": null,
+    "checks": [
+      {
+        "name": "golden:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "golden:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/82c85543643f' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "golden:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "golden:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +3.42% clears the margin",
+        "evidence": {
+          "candidate": 0.2588014945074419,
+          "incumbent": 0.2679698908192264,
+          "relative": 0.034214277894263685
+        }
+      },
+      {
+        "name": "golden:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement is significant (pooled p=0.042)",
+        "evidence": {
+          "pooled_p": 0.04157142857142858,
+          "per_target": {
+            "mu": {
+              "delta": 0.010779711706562485,
+              "p": 0.015
+            },
+            "alpha": {
+              "delta": 0.008164190802771943,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.0028938767959980267,
+              "p": 0.264
+            },
+            "lumo": {
+              "delta": 0.007801014102347605,
+              "p": 0.005
+            },
+            "gap": {
+              "delta": 0.008841018392028674,
+              "p": 0.0065
+            },
+            "r2": {
+              "delta": 0.01261153812438614,
+              "p": 0.0
+            },
+            "cv": {
+              "delta": 0.013087424258396419,
+              "p": 0.0005
+            }
+          }
+        }
+      },
+      {
+        "name": "golden:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "golden:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "4 slices within tolerance",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/82c85543643f' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +9.15% clears the margin",
+        "evidence": {
+          "candidate": 0.33349453557162007,
+          "incumbent": 0.3670958906809004,
+          "relative": 0.09153290996245031
+        }
+      },
+      {
+        "name": "rolling:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement is significant (pooled p=0.041)",
+        "evidence": {
+          "pooled_p": 0.04071428571428572,
+          "per_target": {
+            "mu": {
+              "delta": 0.021694991719370445,
+              "p": 0.004
+            },
+            "alpha": {
+              "delta": 0.03974419486576602,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.006797252360571487,
+              "p": 0.2545
+            },
+            "lumo": {
+              "delta": 0.01727703715743892,
+              "p": 0.0015
+            },
+            "gap": {
+              "delta": 0.012730026293833381,
+              "p": 0.025
+            },
+            "r2": {
+              "delta": 0.06531344819500662,
+              "p": 0.0
+            },
+            "cv": {
+              "delta": 0.0716525351729752,
+              "p": 0.0
+            }
+          }
+        }
+      },
+      {
+        "name": "rolling:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "2 slices within tolerance",
+        "evidence": {}
+      }
+    ]
+  },
+  "artifact_dir": "registry/models/lifecycle-20260824T193639Z-98360f",
+  "notes": "promoted by gate"
+}

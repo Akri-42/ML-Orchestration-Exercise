@@ -1,0 +1,78 @@
+# Pipeline 1 — model lifecycle.
+# ingest -> validate -> train -> benchmark -> gate -> register/promote
+
+pipeline: lifecycle
+
+source:
+  kind: csv_chunks
+  path: data/chunks
+  glob: "chunk_*.csv"
+
+validation:
+  on_failure: quarantine        # reject_chunk | quarantine | warn
+  checks:
+    schema: {required_columns: [smiles, mu, alpha, homo, lumo, gap, r2, zpve, cv, u0, u298, h298, g298]}
+    parseable_smiles: {min_fraction: 0.99}
+    duplicates: {max_fraction: 0.02}
+    target_nan: {max_fraction: 0.01}
+    min_rows: 200
+    # `method` selects the statistic and is enforced: an unknown value raises
+    # when the gate is built rather than falling back to ks. The threshold is
+    # per method on purpose -- KS is a max ECDF gap bounded by 1, PSI is an
+    # unbounded sum where ~0.1 is moderate and ~0.25 a major shift -- so one
+    # number would quietly mean two different policies. Switching methods is
+    # then a one-word config edit with no threshold to re-derive.
+    drift:
+      method: ks                  # ks | psi
+      reference: data/reference_stats.json
+      max_statistic: {ks: 0.25, psi: 0.25}
+
+featurizer:
+  kind: rdkit_descriptors
+  params: {morgan_bits: 1024, morgan_radius: 2, include_descriptors: true}
+
+model:
+  backend: sklearn
+  # RandomForest rather than gradient boosting, and the reason is orchestration
+  # rather than accuracy: the triage pipeline gates on uncertainty, and a forest
+  # gives per-prediction spread across trees for free. Boosting would need three
+  # quantile models per target to say anything about uncertainty at all.
+  # One estimator is fitted per target -- see models.py.
+  estimator: RandomForestRegressor
+  params: {n_estimators: 100, random_state: 0, n_jobs: -1}
+
+evaluation:
+  # Excluded: u0/u298/h298/g298 AND zpve. A linear model on element counts
+  # alone (nC,nN,nO,nF,nH) reproduces the four energies at R^2 = 1.00000 and
+  # zpve at 0.997 -- they are atom counting, not chemistry, and a spectacular
+  # MAE on them says nothing about the model. See README section 7 and
+  # ml_orch.eda.element_count_dominance, which computes it.
+  targets: [mu, alpha, homo, lumo, gap, r2, cv]
+  sets:
+    golden:  {path: data/golden.csv, frozen: true}
+    # holdout_fraction is the load-bearing key. Rolling is built from the
+    # slices held out of each chunk BEFORE training, not from the chunks
+    # themselves -- otherwise it is 100% training data for the candidate and
+    # 0% for the incumbent, and measures memorisation rather than adaptation.
+    rolling: {source: last_n_chunks, n: 2, holdout_fraction: 0.2}
+  slices:
+    heavy_atoms: {column: n_heavy_atoms, bins: [0, 6, 8, 10, 99]}
+    has_fluorine: {column: has_F}
+
+# Thresholds only. Changing the policy here must never require code changes.
+gate:
+  cold_start_min_improvement: 0.20
+  min_margin: 0.01
+  alpha: 0.05
+  n_resamples: 2000
+  max_target_regression: 0.05
+  max_slice_regression: 0.10
+
+registry:
+  root: registry
+  auto_promote: true            # false routes gray-zone results to a review queue
+
+trigger:
+  on_demand: true
+  watch: {path: data/chunks, debounce_seconds: 5}
+  idempotent_on: data_version   # same chunk hash arriving twice must not retrain

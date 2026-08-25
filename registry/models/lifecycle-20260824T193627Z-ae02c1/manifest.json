@@ -1,0 +1,452 @@
+{
+  "version": "lifecycle-20260824T193627Z-ae02c1",
+  "stage": "rejected",
+  "created_at": "2026-08-24T19:36:30+00:00",
+  "versions": {
+    "data": "sha256:1a187482fbf303a6",
+    "featurizer": "rdkit_descriptors@1edb543c96db/958a19e85894",
+    "model": "lifecycle-20260824T193627Z-ae02c1",
+    "code": "dirty:d4b31d0",
+    "config": "sha256:68918b9d12ce2342"
+  },
+  "metrics": {
+    "golden": {
+      "model_version": "lifecycle-20260824T193627Z-ae02c1",
+      "eval_set": "golden",
+      "normalized_score": 0.3081141615722305,
+      "per_target": {
+        "mu": {
+          "mae": 0.7293502026666668,
+          "rmse": 1.091247950208774,
+          "r2": 0.49553642904779593,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 2.6913905333333354,
+          "rmse": 3.911429130557443,
+          "r2": 0.9113916177818083,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.010198471999999995,
+          "rmse": 0.013928453443126172,
+          "r2": 0.705267827089852,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.012962725333333331,
+          "rmse": 0.019245178343124458,
+          "r2": 0.8364165245785606,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.015263013333333327,
+          "rmse": 0.021480551551205568,
+          "r2": 0.8127133661940604,
+          "n": 750
+        },
+        "r2": {
+          "mae": 93.31661737733339,
+          "rmse": 148.7646152612195,
+          "r2": 0.8173161583766042,
+          "n": 750
+        },
+        "cv": {
+          "mae": 1.3318038933333323,
+          "rmse": 1.7579213304680794,
+          "r2": 0.9064450212667563,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.20106636430313257,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.22121570048099817,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.3403460306521546,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.30680604462239774,
+          "n": 748
+        }
+      }
+    },
+    "golden_incumbent": {
+      "model_version": "lifecycle-20260824T193624Z-0f55ef",
+      "eval_set": "golden",
+      "normalized_score": 0.389885818934179,
+      "per_target": {
+        "mu": {
+          "mae": 0.7325302066666667,
+          "rmse": 1.10558303601158,
+          "r2": 0.48219569057978295,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 5.775102400000004,
+          "rmse": 7.465303148614935,
+          "r2": 0.6772258308271445,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.011296510666666667,
+          "rmse": 0.015635215104585758,
+          "r2": 0.6286106264626826,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.014334966666666664,
+          "rmse": 0.02110046461412639,
+          "r2": 0.8033565037794134,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.01719150399999999,
+          "rmse": 0.024698109280833613,
+          "r2": 0.7524041604223284,
+          "n": 750
+        },
+        "r2": {
+          "mae": 148.76191529866662,
+          "rmse": 216.9908180254808,
+          "r2": 0.6113277244486977,
+          "n": 750
+        },
+        "cv": {
+          "mae": 1.7103333333333333,
+          "rmse": 2.198771059872371,
+          "r2": 0.8536380938209318,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.20351595229561092,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.22452936539583238,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.45012214950481555,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.3894199112506396,
+          "n": 748
+        }
+      }
+    },
+    "rolling": {
+      "model_version": "lifecycle-20260824T193627Z-ae02c1",
+      "eval_set": "rolling",
+      "normalized_score": 0.2992774567616307,
+      "per_target": {
+        "mu": {
+          "mae": 0.6155537007042252,
+          "rmse": 0.8697434042310883,
+          "r2": 0.6077922207755653,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 1.9449778169014096,
+          "rmse": 2.711040221587165,
+          "r2": 0.8951045123880723,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.008795880281690144,
+          "rmse": 0.011808329274138612,
+          "r2": 0.7597199022658709,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.011981616197183098,
+          "rmse": 0.017389503565572027,
+          "r2": 0.8748141780934922,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.012802489436619713,
+          "rmse": 0.017590417094939612,
+          "r2": 0.874260603768963,
+          "n": 284
+        },
+        "r2": {
+          "mae": 68.31099624999999,
+          "rmse": 109.89262520950005,
+          "r2": 0.7848490573360812,
+          "n": 284
+        },
+        "cv": {
+          "mae": 1.0057835563380277,
+          "rmse": 1.281945232981124,
+          "r2": 0.886757247112539,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.2613701085267007,
+          "n": 88
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.3162970824997625,
+          "n": 196
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.29413957218325765,
+          "n": 279
+        }
+      }
+    },
+    "rolling_incumbent": {
+      "model_version": "lifecycle-20260824T193624Z-0f55ef",
+      "eval_set": "rolling",
+      "normalized_score": 0.38625198739435895,
+      "per_target": {
+        "mu": {
+          "mae": 0.6487275633802816,
+          "rmse": 0.9371317459557377,
+          "r2": 0.5446606158347439,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 3.347786971830985,
+          "rmse": 5.0453149126054715,
+          "r2": 0.63670330941182,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.01078481338028169,
+          "rmse": 0.014677801936962642,
+          "r2": 0.6287530143023151,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.014156725352112676,
+          "rmse": 0.020448788990969198,
+          "r2": 0.8268924682176557,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.014922112676056325,
+          "rmse": 0.02084056643076021,
+          "r2": 0.8235026727546486,
+          "n": 284
+        },
+        "r2": {
+          "mae": 103.56777928169015,
+          "rmse": 149.39549352911362,
+          "r2": 0.6023681614578895,
+          "n": 284
+        },
+        "cv": {
+          "mae": 1.3828607394366204,
+          "rmse": 1.8414166072979663,
+          "r2": 0.7663447271261524,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.2653775383061451,
+          "n": 88
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.4405221482094754,
+          "n": 196
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.38024722997348237,
+          "n": 279
+        }
+      }
+    }
+  },
+  "gate_decision": {
+    "verdict": false,
+    "n_selected": null,
+    "checks": [
+      {
+        "name": "golden:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "golden:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/958a19e85894' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "golden:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "golden:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +20.97% clears the margin",
+        "evidence": {
+          "candidate": 0.3081141615722305,
+          "incumbent": 0.389885818934179,
+          "relative": 0.2097323200558708
+        }
+      },
+      {
+        "name": "golden:significance",
+        "verdict": false,
+        "blocking": true,
+        "reason": "improvement is within noise (pooled p=0.057 > alpha=0.05)",
+        "evidence": {
+          "pooled_p": 0.05742857142857143,
+          "per_target": {
+            "mu": {
+              "delta": 0.0020697559046448577,
+              "p": 0.4015
+            },
+            "alpha": {
+              "delta": 0.2346798110479048,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.04279849622748809,
+              "p": 0.0005
+            },
+            "lumo": {
+              "delta": 0.028838872167689385,
+              "p": 0.0
+            },
+            "gap": {
+              "delta": 0.03885308470028283,
+              "p": 0.0
+            },
+            "r2": {
+              "delta": 0.1592997689290508,
+              "p": 0.0
+            },
+            "cv": {
+              "delta": 0.06586181255657916,
+              "p": 0.0
+            }
+          }
+        }
+      },
+      {
+        "name": "golden:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "golden:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "4 slices within tolerance",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/958a19e85894' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +22.52% clears the margin",
+        "evidence": {
+          "candidate": 0.2992774567616307,
+          "incumbent": 0.38625198739435895,
+          "relative": 0.22517561972808242
+        }
+      },
+      {
+        "name": "rolling:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement is significant (pooled p=0.008)",
+        "evidence": {
+          "pooled_p": 0.008499999999999999,
+          "per_target": {
+            "mu": {
+              "delta": 0.023887076495513138,
+              "p": 0.0595
+            },
+            "alpha": {
+              "delta": 0.16758727281109595,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.08256398003101284,
+              "p": 0.0
+            },
+            "lumo": {
+              "delta": 0.04425592728630726,
+              "p": 0.0
+            },
+            "gap": {
+              "delta": 0.042728556415705776,
+              "p": 0.0
+            },
+            "r2": {
+              "delta": 0.14881467538210694,
+              "p": 0.0
+            },
+            "cv": {
+              "delta": 0.09898422600735558,
+              "p": 0.0
+            }
+          }
+        }
+      },
+      {
+        "name": "rolling:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "3 slices within tolerance",
+        "evidence": {}
+      }
+    ]
+  },
+  "artifact_dir": "registry/models/lifecycle-20260824T193627Z-ae02c1",
+  "notes": "blocked by gate"
+}

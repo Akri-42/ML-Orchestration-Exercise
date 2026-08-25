@@ -1,0 +1,258 @@
+{
+  "version": "lifecycle-20260824T193621Z-0aed32",
+  "stage": "staging",
+  "created_at": "2026-08-24T19:36:24+00:00",
+  "versions": {
+    "data": "sha256:96300360a0b36b01",
+    "featurizer": "rdkit_descriptors@1edb543c96db/18c576bf2d1f",
+    "model": "lifecycle-20260824T193621Z-0aed32",
+    "code": "dirty:d4b31d0",
+    "config": "sha256:68918b9d12ce2342"
+  },
+  "metrics": {
+    "golden": {
+      "model_version": "lifecycle-20260824T193621Z-0aed32",
+      "eval_set": "golden",
+      "normalized_score": 0.5971714789730501,
+      "per_target": {
+        "mu": {
+          "mae": 0.7659591600000001,
+          "rmse": 1.1242513931459066,
+          "r2": 0.46456125169598106,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 11.694720533333342,
+          "rmse": 13.972324254279252,
+          "r2": -0.13068384505704378,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.013320887999999996,
+          "rmse": 0.01859093065577944,
+          "r2": 0.4749217681705806,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.01673467333333333,
+          "rmse": 0.024068007219072655,
+          "r2": 0.7441556580384008,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.023573825333333326,
+          "rmse": 0.03196696042656125,
+          "r2": 0.5852192296517493,
+          "n": 750
+        },
+        "r2": {
+          "mae": 283.4917902040001,
+          "rmse": 370.57306502509107,
+          "r2": -0.13357053328414126,
+          "n": 750
+        },
+        "cv": {
+          "mae": 3.6283798399999996,
+          "rmse": 4.55764839543409,
+          "r2": 0.3711462302150229,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.21154986668606549,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.2763573346456619,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.7155596305301594,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.5971893008978506,
+          "n": 748
+        }
+      }
+    },
+    "rolling": {
+      "model_version": "lifecycle-20260824T193621Z-0aed32",
+      "eval_set": "rolling",
+      "normalized_score": 0.27919912095614646,
+      "per_target": {
+        "mu": {
+          "mae": 0.5693643380281691,
+          "rmse": 0.8503605068223281,
+          "r2": 0.6068345019710846,
+          "n": 142
+        },
+        "alpha": {
+          "mae": 1.68560985915493,
+          "rmse": 2.279439877979664,
+          "r2": 0.9378873686623491,
+          "n": 142
+        },
+        "homo": {
+          "mae": 0.010450260563380285,
+          "rmse": 0.015168772748086727,
+          "r2": 0.6454213695021512,
+          "n": 142
+        },
+        "lumo": {
+          "mae": 0.011852119718309859,
+          "rmse": 0.01653268646127303,
+          "r2": 0.8954455783257302,
+          "n": 142
+        },
+        "gap": {
+          "mae": 0.01606830985915491,
+          "rmse": 0.022968008496817013,
+          "r2": 0.8226474677722196,
+          "n": 142
+        },
+        "r2": {
+          "mae": 37.044166330985924,
+          "rmse": 59.89805236110296,
+          "r2": 0.9038248921812214,
+          "n": 142
+        },
+        "cv": {
+          "mae": 0.9631131690140867,
+          "rmse": 1.3629017982957865,
+          "r2": 0.9014801582237933,
+          "n": 142
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.30120272077965016,
+          "n": 25
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.2744974970622354,
+          "n": 117
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.27323366318055164,
+          "n": 140
+        }
+      }
+    }
+  },
+  "gate_decision": {
+    "verdict": true,
+    "n_selected": null,
+    "checks": [
+      {
+        "name": "golden:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "golden:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/18c576bf2d1f' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "golden:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "cold start: +46.9% vs baseline",
+        "evidence": {
+          "candidate": 0.5971714789730501,
+          "baseline": 1.1244902955138416,
+          "relative": 0.4689403000137324
+        }
+      },
+      {
+        "name": "golden:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; margin check delegated to cold_start",
+        "evidence": {}
+      },
+      {
+        "name": "golden:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; significance not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "golden:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; per-target regression not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "golden:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no slice metrics to compare",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/18c576bf2d1f' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "cold start: +65.0% vs baseline",
+        "evidence": {
+          "candidate": 0.27919912095614646,
+          "baseline": 0.7969076703989033,
+          "relative": 0.6496468394934769
+        }
+      },
+      {
+        "name": "rolling:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; margin check delegated to cold_start",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; significance not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no incumbent; per-target regression not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no slice metrics to compare",
+        "evidence": {}
+      }
+    ]
+  },
+  "artifact_dir": "registry/models/lifecycle-20260824T193621Z-0aed32",
+  "notes": "promoted by gate"
+}

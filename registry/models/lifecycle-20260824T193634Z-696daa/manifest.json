@@ -1,0 +1,444 @@
+{
+  "version": "lifecycle-20260824T193634Z-696daa",
+  "stage": "staging",
+  "created_at": "2026-08-24T19:36:39+00:00",
+  "versions": {
+    "data": "sha256:650d50b006685ede",
+    "featurizer": "rdkit_descriptors@1edb543c96db/4f14099b4daa",
+    "model": "lifecycle-20260824T193634Z-696daa",
+    "code": "dirty:d4b31d0",
+    "config": "sha256:68918b9d12ce2342"
+  },
+  "metrics": {
+    "golden": {
+      "model_version": "lifecycle-20260824T193634Z-696daa",
+      "eval_set": "golden",
+      "normalized_score": 0.26796989081922634,
+      "per_target": {
+        "mu": {
+          "mae": 0.7175524853333333,
+          "rmse": 1.0844957566416373,
+          "r2": 0.5017599412847059,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 1.833919333333334,
+          "rmse": 2.8137447172075394,
+          "r2": 0.9541464187070118,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.009472497333333331,
+          "rmse": 0.01324327185237847,
+          "r2": 0.7335520761887908,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.011419586666666667,
+          "rmse": 0.016920780942182703,
+          "r2": 0.8735448977924363,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.013369090666666656,
+          "rmse": 0.01887754690044939,
+          "r2": 0.8553537953028123,
+          "n": 750
+        },
+        "r2": {
+          "mae": 73.09351614399999,
+          "rmse": 116.88317058488339,
+          "r2": 0.887227082375083,
+          "n": 750
+        },
+        "cv": {
+          "mae": 1.0381814933333329,
+          "rmse": 1.350048854366981,
+          "r2": 0.9448218669646706,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.20219097973162187,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.2196815608287269,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.2862790614277744,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.2667542901482482,
+          "n": 748
+        }
+      }
+    },
+    "golden_incumbent": {
+      "model_version": "lifecycle-20260824T193630Z-f93d79",
+      "eval_set": "golden",
+      "normalized_score": 0.28103924063564106,
+      "per_target": {
+        "mu": {
+          "mae": 0.7254377466666666,
+          "rmse": 1.0836986042783028,
+          "r2": 0.5024921290649336,
+          "n": 750
+        },
+        "alpha": {
+          "mae": 2.016574933333334,
+          "rmse": 3.1213575077434936,
+          "r2": 0.9435724877894004,
+          "n": 750
+        },
+        "homo": {
+          "mae": 0.009811655999999998,
+          "rmse": 0.013474021722015046,
+          "r2": 0.7241860432856665,
+          "n": 750
+        },
+        "lumo": {
+          "mae": 0.011974998666666667,
+          "rmse": 0.01759639621191415,
+          "r2": 0.863245062523331,
+          "n": 750
+        },
+        "gap": {
+          "mae": 0.013914330666666657,
+          "rmse": 0.019658030142005577,
+          "r2": 0.8431458836965562,
+          "n": 750
+        },
+        "r2": {
+          "mae": 76.32165106,
+          "rmse": 122.32453831545625,
+          "r2": 0.8764826346531528,
+          "n": 750
+        },
+        "cv": {
+          "mae": 1.1950891866666657,
+          "rmse": 1.547475059519473,
+          "r2": 0.9275037822639114,
+          "n": 750
+        }
+      },
+      "slices": {
+        "heavy_atoms[0-6)": {
+          "normalized_mae": 0.2060735378822212,
+          "n": 35
+        },
+        "heavy_atoms[6-8)": {
+          "normalized_mae": 0.21960730871508796,
+          "n": 162
+        },
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.30378023985354213,
+          "n": 553
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.27961059631789936,
+          "n": 748
+        }
+      }
+    },
+    "rolling": {
+      "model_version": "lifecycle-20260824T193634Z-696daa",
+      "eval_set": "rolling",
+      "normalized_score": 0.3314386581787457,
+      "per_target": {
+        "mu": {
+          "mae": 0.6299544330985917,
+          "rmse": 0.877536479053325,
+          "r2": 0.5942213651112991,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 1.586485915492954,
+          "rmse": 2.3215872629836394,
+          "r2": 0.8702258129696544,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.008431383802816899,
+          "rmse": 0.010930680325752956,
+          "r2": 0.6498903220523815,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.010136426056338027,
+          "rmse": 0.01404305590025211,
+          "r2": 0.8970650002073978,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.012790732394366193,
+          "rmse": 0.018010208315184423,
+          "r2": 0.8239004603848997,
+          "n": 284
+        },
+        "r2": {
+          "mae": 76.81080873943661,
+          "rmse": 116.0687165926058,
+          "r2": 0.755025462818427,
+          "n": 284
+        },
+        "cv": {
+          "mae": 1.0031740845070425,
+          "rmse": 1.3165573925099272,
+          "r2": 0.8418205836990293,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.3314386581787457,
+          "n": 284
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.3314386581787457,
+          "n": 284
+        }
+      }
+    },
+    "rolling_incumbent": {
+      "model_version": "lifecycle-20260824T193630Z-f93d79",
+      "eval_set": "rolling",
+      "normalized_score": 0.3691946250058085,
+      "per_target": {
+        "mu": {
+          "mae": 0.6536231549295776,
+          "rmse": 0.8999439415953783,
+          "r2": 0.5732340770580676,
+          "n": 284
+        },
+        "alpha": {
+          "mae": 1.914933802816901,
+          "rmse": 2.7051929062323055,
+          "r2": 0.8237964021392485,
+          "n": 284
+        },
+        "homo": {
+          "mae": 0.008903271126760565,
+          "rmse": 0.011816847164619332,
+          "r2": 0.5908213487560404,
+          "n": 284
+        },
+        "lumo": {
+          "mae": 0.011015721830985915,
+          "rmse": 0.015385238365160838,
+          "r2": 0.8764484275244138,
+          "n": 284
+        },
+        "gap": {
+          "mae": 0.01445385915492958,
+          "rmse": 0.019917386438366137,
+          "r2": 0.7846298811817791,
+          "n": 284
+        },
+        "r2": {
+          "mae": 85.07582895774647,
+          "rmse": 130.76814629493862,
+          "r2": 0.6890471683296423,
+          "n": 284
+        },
+        "cv": {
+          "mae": 1.2564650000000006,
+          "rmse": 1.6294548321899525,
+          "r2": 0.757699098686213,
+          "n": 284
+        }
+      },
+      "slices": {
+        "heavy_atoms[8-10)": {
+          "normalized_mae": 0.3691946250058085,
+          "n": 284
+        },
+        "has_fluorine=false": {
+          "normalized_mae": 0.3691946250058085,
+          "n": 284
+        }
+      }
+    }
+  },
+  "gate_decision": {
+    "verdict": true,
+    "n_selected": null,
+    "checks": [
+      {
+        "name": "golden:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "golden:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/4f14099b4daa' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "golden:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "golden:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +4.65% clears the margin",
+        "evidence": {
+          "candidate": 0.26796989081922634,
+          "incumbent": 0.28103924063564106,
+          "relative": 0.046503647628904396
+        }
+      },
+      {
+        "name": "golden:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement is significant (pooled p=0.020)",
+        "evidence": {
+          "pooled_p": 0.019571428571428573,
+          "per_target": {
+            "mu": {
+              "delta": 0.005132247067718968,
+              "p": 0.129
+            },
+            "alpha": {
+              "delta": 0.01390064427166382,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.013219462443811888,
+              "p": 0.003
+            },
+            "lumo": {
+              "delta": 0.011672477194293835,
+              "p": 0.0005
+            },
+            "gap": {
+              "delta": 0.010984888995391738,
+              "p": 0.0005
+            },
+            "r2": {
+              "delta": 0.009274747642626329,
+              "p": 0.004
+            },
+            "cv": {
+              "delta": 0.027300981099396524,
+              "p": 0.0
+            }
+          }
+        }
+      },
+      {
+        "name": "golden:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "golden:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "4 slices within tolerance",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:sanity",
+        "verdict": true,
+        "blocking": true,
+        "reason": "7 targets finite and non-empty",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:featurizer_binding",
+        "verdict": true,
+        "blocking": true,
+        "reason": "featurizer 'rdkit_descriptors@1edb543c96db/4f14099b4daa' matches model binding",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:cold_start",
+        "verdict": true,
+        "blocking": true,
+        "reason": "incumbent exists; cold-start check not applicable",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:minimum_margin",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement +10.23% clears the margin",
+        "evidence": {
+          "candidate": 0.3314386581787457,
+          "incumbent": 0.3691946250058085,
+          "relative": 0.10226575434696218
+        }
+      },
+      {
+        "name": "rolling:significance",
+        "verdict": true,
+        "blocking": true,
+        "reason": "improvement is significant (pooled p=0.006)",
+        "evidence": {
+          "pooled_p": 0.006285714285714285,
+          "per_target": {
+            "mu": {
+              "delta": 0.017181228546930005,
+              "p": 0.032
+            },
+            "alpha": {
+              "delta": 0.0509654213162343,
+              "p": 0.0
+            },
+            "homo": {
+              "delta": 0.025544251176931702,
+              "p": 0.008
+            },
+            "lumo": {
+              "delta": 0.02008884165590411,
+              "p": 0.0
+            },
+            "gap": {
+              "delta": 0.03875125086430145,
+              "p": 0.0
+            },
+            "r2": {
+              "delta": 0.03524432609712365,
+              "p": 0.004
+            },
+            "cv": {
+              "delta": 0.07651644813201393,
+              "p": 0.0
+            }
+          }
+        }
+      },
+      {
+        "name": "rolling:no_target_regression",
+        "verdict": true,
+        "blocking": true,
+        "reason": "no target regressed beyond threshold",
+        "evidence": {}
+      },
+      {
+        "name": "rolling:slices",
+        "verdict": true,
+        "blocking": true,
+        "reason": "2 slices within tolerance",
+        "evidence": {}
+      }
+    ]
+  },
+  "artifact_dir": "registry/models/lifecycle-20260824T193634Z-696daa",
+  "notes": "promoted by gate"
+}

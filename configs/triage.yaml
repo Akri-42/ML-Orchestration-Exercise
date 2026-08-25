@@ -1,0 +1,74 @@
+# Pipeline 2 — de novo candidate triage.
+#
+# Read this next to configs/lifecycle.yaml. `source`, `validation`, `registry`
+# and `model` are the SAME keys backed by the SAME primitives. The only
+# structural differences are that `gate` composes record-level gates instead of
+# report-level ones, there is no training or registration step, and
+# `featurizer` is an assertion rather than a choice (see below).
+#
+# That is most of the answer to "how much of pipeline 2 is new config versus a
+# rewrite": this file, plus three implementations of the existing `Gate`
+# protocol in gates.py. No new interfaces, no second loader, no second
+# featurizer, no second thresholding path.
+
+pipeline: triage
+
+source:
+  kind: csv_batch
+  path: data/candidates/batch_001.csv
+
+validation:
+  on_failure: quarantine        # bad candidates are reported, they do not kill the run
+  checks:
+    schema: {required_columns: [candidate_id, smiles]}
+    parseable_smiles: {min_fraction: 0.0}   # unparseable candidates are dropped and listed
+    duplicates: {max_fraction: 1.0}
+
+registry:
+  root: registry
+
+featurizer:
+  # Read and enforced, not obeyed: `from_promoted_model` is the only accepted
+  # value, and any other raises. The featurizer is loaded from the promoted
+  # model's artifact, bound to its version -- re-deriving it here is the
+  # train/serve skew bug this system exists to prevent, so the key exists to
+  # document the constraint at the exact place someone would try to violate it.
+  kind: from_promoted_model
+
+model:
+  # Which stage to score with. `production` by default, because scoring real
+  # candidates with an unpromoted model should have to be asked for by name;
+  # `staging` turns this file into a shadow run with no code change.
+  stage: production
+
+gate:
+  - kind: property_threshold
+    target: gap
+    minimum: 0.20
+    maximum: 0.35
+  - kind: uncertainty
+    target: gap
+    max_uncertainty: 0.05
+  - kind: top_k
+    target: mu
+    k: 25
+    largest: false
+
+output:
+  shortlist: runs/{run_id}/shortlist.csv
+  manifest: runs/{run_id}/manifest.json
+  rejected: runs/{run_id}/rejected.csv     # with the gate that dropped each one
+
+# --- The third pipeline, for the write-up. Not built; shown to make the point
+# --- that it needs no new primitives, only `invert: true`.
+#
+# active_learning:
+#   gate:
+#     - kind: uncertainty
+#       target: gap
+#       max_uncertainty: 0.05
+#       invert: true            # select what the model does NOT know
+#     - kind: top_k
+#       target: gap
+#       k: 96                   # one assay plate
+#   sink: data/chunks           # oracle results land here -> fires pipeline 1

@@ -1,0 +1,24 @@
+{
+  "source_url": "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/qm9.csv",
+  "sha256": "3e668f8c34e4bc392a90d417a50a5eed3b64b842a817a633024bdc054c68ccb4",
+  "bytes": 29856825,
+  "rows": 133885,
+  "header": "mol_id,smiles,A,B,C,mu,alpha,homo,lumo,gap,r2,zpve,u0,u298,h298,g298,cv,u0_atom,u298_atom,h298_atom,g298_atom",
+  "expected_tasks": [
+    "mu",
+    "alpha",
+    "homo",
+    "lumo",
+    "gap",
+    "r2",
+    "zpve",
+    "cv",
+    "u0",
+    "u298",
+    "h298",
+    "g298"
+  ],
+  "required_columns": [
+    "smiles"
+  ]
+}
